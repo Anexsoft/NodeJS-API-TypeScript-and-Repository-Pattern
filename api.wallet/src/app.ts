@@ -9,18 +9,18 @@ dotenv.config({
 });
 
 import express = require('express');
+import { loadControllers } from 'awilix-express';
+import loadContainer from './container';
 
 const app: express.Application = express();
 
-app.get('/', (req, res) => {
-    res.send('Running ..');
-});
+// Container
+loadContainer(app);
 
-import { container } from './container';
-import { TestService } from './services/test.service';
-
-const testService = container.resolve<TestService>('testService'); 
-
-console.log(testService.get());
+// Controllers
+app.use(loadControllers(
+    'controllers/*.ts',
+    { cwd: __dirname }
+));
 
 export { app };
