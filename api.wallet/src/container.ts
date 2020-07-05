@@ -3,7 +3,7 @@ import { createContainer, asClass } from "awilix";
 import { scopePerRequest } from "awilix-express";
 import { TestService } from "./services/test.service";
 
-export default (app: express.Application) => {
+export default (app: express.Application): void => {
     const container = createContainer({
         injectionMode: 'CLASSIC'
     });
