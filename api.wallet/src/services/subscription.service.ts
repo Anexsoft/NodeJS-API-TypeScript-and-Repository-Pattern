@@ -16,7 +16,7 @@ export class SubscriptionService {
     }
 
     public async store(entry: SubscriptionCreateDto): Promise<void> {
-        const originalEntry = await this.subscriptionRepository.findByUserAndCode(entry.user_id, entry.code);
+        const originalEntry = await this.subscriptionRepository.findByUserIdAndCode(entry.user_id, entry.code);
 
         if (!originalEntry) {
             await this.subscriptionRepository.store(entry as Subscription);
