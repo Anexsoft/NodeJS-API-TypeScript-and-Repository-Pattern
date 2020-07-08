@@ -10,6 +10,7 @@ import { MovementService } from './services/movement.service';
 import { SubscriptionMSSQLRepository } from './services/repositories/impl/mssql/subscription.repository';
 import { MovementMSSQLRepository } from './services/repositories/impl/mssql/movement.repository';
 import { BalanceMSSQLRepository } from './services/repositories/impl/mssql/balance.repository';
+import { SubscriptionMockRepository } from './services/repositories/impl/mock/subscription.repository';
 
 export default (app: express.Application): void => {
     const container = createContainer({
@@ -18,12 +19,15 @@ export default (app: express.Application): void => {
 
     container.register({
         // repositories
-        subscriptionRepository: asClass(SubscriptionMSSQLRepository).scoped(),
-        movementRepository: asClass(MovementMSSQLRepository).scoped(),
-        balanceRepository: asClass(BalanceMSSQLRepository).scoped(),
-        // subscriptionRepository: asClass(SubscriptionMySQLRepository).scoped(),
-        // movementRepository: asClass(MovementMySQLRepository).scoped(),
-        // balanceRepository: asClass(BalanceMysqlRepository).scoped(),
+        // subscriptionRepository: asClass(SubscriptionMockRepository).scoped(),
+        // movementRepository: asClass(MovementMSSQLRepository).scoped(),
+        // balanceRepository: asClass(BalanceMSSQLRepository).scoped(),
+        // subscriptionRepository: asClass(SubscriptionMSSQLRepository).scoped(),
+        // movementRepository: asClass(MovementMSSQLRepository).scoped(),
+        // balanceRepository: asClass(BalanceMSSQLRepository).scoped(),
+        subscriptionRepository: asClass(SubscriptionMySQLRepository).scoped(),
+        movementRepository: asClass(MovementMySQLRepository).scoped(),
+        balanceRepository: asClass(BalanceMysqlRepository).scoped(),
 
         // services
         subscriptionService: asClass(SubscriptionService).scoped(),

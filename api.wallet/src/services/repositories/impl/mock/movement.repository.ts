@@ -2,7 +2,7 @@ import db from "../../../../common/persistence/mock.persistence";
 import { MovementRepository } from "../../movement.repository";
 import { Movement } from "../../domain/movement";
 
-export class MovementMSSQLRepository implements MovementRepository {
+export class MovementMockRepository implements MovementRepository {
     public async find(id: number): Promise<Movement | null> {
         const table = db.movements as Movement[];
         const result = table.find(x => x.id === id);

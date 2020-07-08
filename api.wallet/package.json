@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "api to managment incomes and outcomes",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha -r ts-node/register src/**/**.spec.ts",
     "start": "ts-node src/server.ts",
     "start:dev": "ts-node-dev --respawn --transpileOnly src/server.ts",
     "lint": "eslint src/* --fix"
@@ -20,6 +20,7 @@
     "typescript": "^3.9.6"
   },
   "devDependencies": {
+    "@types/assert": "^1.5.1",
     "@types/express": "^4.17.6",
     "@types/mocha": "^7.0.2",
     "@types/mssql": "^6.0.3",
