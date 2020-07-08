@@ -7,6 +7,9 @@ import { SubscriptionService } from './services/subscription.service';
 import { MovementMySQLRepository } from './services/repositories/impl/mysql/movement.repository';
 import { BalanceMysqlRepository } from './services/repositories/impl/mysql/balance.repository';
 import { MovementService } from './services/movement.service';
+import { SubscriptionMSSQLRepository } from './services/repositories/impl/mssql/subscription.repository';
+import { MovementMSSQLRepository } from './services/repositories/impl/mssql/movement.repository';
+import { BalanceMSSQLRepository } from './services/repositories/impl/mssql/balance.repository';
 
 export default (app: express.Application): void => {
     const container = createContainer({
@@ -15,9 +18,12 @@ export default (app: express.Application): void => {
 
     container.register({
         // repositories
-        subscriptionRepository: asClass(SubscriptionMySQLRepository).scoped(),
-        movementRepository: asClass(MovementMySQLRepository).scoped(),
-        balanceRepository: asClass(BalanceMysqlRepository).scoped(),
+        subscriptionRepository: asClass(SubscriptionMSSQLRepository).scoped(),
+        movementRepository: asClass(MovementMSSQLRepository).scoped(),
+        balanceRepository: asClass(BalanceMSSQLRepository).scoped(),
+        // subscriptionRepository: asClass(SubscriptionMySQLRepository).scoped(),
+        // movementRepository: asClass(MovementMySQLRepository).scoped(),
+        // balanceRepository: asClass(BalanceMysqlRepository).scoped(),
 
         // services
         subscriptionService: asClass(SubscriptionService).scoped(),
