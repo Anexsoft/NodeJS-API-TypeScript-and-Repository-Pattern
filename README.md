@@ -17,7 +17,7 @@ npm run start:dev
 ```
 
 ## Base de datos
-El proyecto hace uso del patrón repositorio y puede intercambiar entre una y la otra. En ambos casos se adjutan los scripts para SQL Server y MySQL.
+El proyecto hace uso del patrón repositorio y puede intercambiar entre una base de datos y otra. En ambos casos se adjuntan los scripts para SQL Server y MySQL.
 
 El usuario por defecto es:
 
