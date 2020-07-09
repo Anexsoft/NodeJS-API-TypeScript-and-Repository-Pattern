@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import { route, GET, POST, PUT, DELETE } from "awilix-express";
 import { SubscriptionService } from '../services/subscription.service';
 import { BaseController } from '../common/controllers/base.controller';
+import { SubscriptionCreateDto, SubscriptionUpdateDto } from '../dtos/subscription.dto';
 
 @route('/subscriptions')
 export class SubscriptionController extends BaseController {

@@ -10,3 +10,8 @@ interface SubscriptionUpdateDto {
     amount: number;
     cron: string;
 }
+
+export {
+    SubscriptionCreateDto,
+    SubscriptionUpdateDto
+}
