@@ -28,7 +28,7 @@ password: 123456
 
 
 ## ¿Quieres entender mejor este proyecto?
-Este proyecto forma parte de nuestro que puedes adquirir a través del siguiente enlace.
+Este proyecto forma parte de nuestro curso que puedes adquirir a través del siguiente enlace.
 
 https://kodoti.com/cursos/api-rest-con-nodejs
 
