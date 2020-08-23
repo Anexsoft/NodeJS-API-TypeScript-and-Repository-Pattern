@@ -30,6 +30,6 @@ password: 123456
 ## ¿Quieres entender mejor este proyecto?
 Este proyecto forma parte de nuestro curso que puedes adquirir a través del siguiente enlace.
 
-https://www.udemy.com/course/draft/3425570/?referralCode=39B3AED9F192102D5465
+https://www.udemy.com/course/node-js-apis-poderosas-con-typescript-repository-pattern/?referralCode=39B3AED9F192102D5465
 
 Happy Code 🤓
